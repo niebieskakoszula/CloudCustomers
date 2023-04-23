@@ -31,5 +31,21 @@ namespace CloudCustomers.API.Controllers
 			}
 			return NotFound();
 		}
+
+		/// <summary>
+		/// Function added to check if codecov coverage reports are generated correctly 
+		/// </summary>
+		/// <returns></returns>
+		[HttpGet(Name = "EmptyFunc")]
+		public async Task<IActionResult> EmptyFunc()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
 	}
 }
