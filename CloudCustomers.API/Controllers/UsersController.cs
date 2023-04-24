@@ -31,5 +31,64 @@ namespace CloudCustomers.API.Controllers
 			}
 			return NotFound();
 		}
+		[HttpGet(Name = "FakeMethod_1")]
+		public async Task<IActionResult> FakeMethod_1()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
+
+		[HttpGet(Name = "FakeMethod_2")]
+		public async Task<IActionResult> FakeMethod_2()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
+
+		[HttpGet(Name = "FakeMethod_3")]
+		public async Task<IActionResult> FakeMethod_3()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
+
+		[HttpGet(Name = "FakeMethod_4")]
+		public async Task<IActionResult> FakeMethod_4()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
+
+		[HttpGet(Name = "FakeMethod_5")]
+		public async Task<IActionResult> FakeMethod_5()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
 	}
 }
