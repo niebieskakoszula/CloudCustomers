@@ -44,18 +44,6 @@ namespace CloudCustomers.API.Controllers
 			return NotFound();
 		}
 
-		[HttpGet(Name = "FakeMethod")]
-		public async Task<IActionResult> FakeMethod()
-		{
-			var users = await _userService.GetAllUsers();
-
-			if (users.Any())
-			{
-				return Ok(users);
-			}
-			return NotFound();
-		}
-
 		[HttpGet(Name = "FakeMethod2")]
 		public async Task<IActionResult> FakeMethod2()
 		{
@@ -70,6 +58,18 @@ namespace CloudCustomers.API.Controllers
 
 		[HttpGet(Name = "FakeMethod3")]
 		public async Task<IActionResult> FakeMethod3()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
+
+		[HttpGet(Name = "FakeMethod4")]
+		public async Task<IActionResult> FakeMethod4()
 		{
 			var users = await _userService.GetAllUsers();
 
