@@ -24,6 +24,7 @@ namespace CloudCustomers.API.Controllers
 		public async Task<IActionResult> Get()
 		{
 			var users = await _userService.GetAllUsers();
+			int a = 5;
 
 			if (users.Any())
 			{
