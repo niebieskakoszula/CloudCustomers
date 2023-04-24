@@ -12,7 +12,7 @@ public class Program
 
 		// Add services to the container.
 
-		ConfigureServices(builder.Services);
+		ConfigureServices(builder.Services, builder);
 
 		builder.Services.AddControllers();
 
@@ -31,7 +31,7 @@ public class Program
 	}
 
 	[ExcludeFromCodeCoverage]
-	static void ConfigureServices(IServiceCollection services)
+	static void ConfigureServices(IServiceCollection services, WebApplicationBuilder builder)
 	{
 		services.AddTransient<IUsersService, UsersService>();
 		services.AddHttpClient<IUsersService, UsersService>();
