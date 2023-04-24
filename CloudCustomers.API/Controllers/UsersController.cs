@@ -31,29 +31,5 @@ namespace CloudCustomers.API.Controllers
 			}
 			return NotFound();
 		}
-
-		[HttpGet(Name = "FakeMethod_1")]
-		public async Task<IActionResult> FakeMethod_1()
-		{
-			var users = await _userService.GetAllUsers();
-
-			if (users.Any())
-			{
-				return Ok(users);
-			}
-			return NotFound();
-		}
-
-		[HttpGet(Name = "FakeMethod_2")]
-		public async Task<IActionResult> FakeMethod_2()
-		{
-			var users = await _userService.GetAllUsers();
-
-			if (users.Any())
-			{
-				return Ok(users);
-			}
-			return NotFound();
-		}
 	}
 }
