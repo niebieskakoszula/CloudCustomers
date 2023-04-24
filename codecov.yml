@@ -1,5 +1,6 @@
 codecov:
   require_ci_to_pass: true
+  token: ccd7505c-737a-46c9-807c-a886857c5bf5
 comment:                  # this is a top-level key
   layout: "reach, diff, flags, files"
   behavior: default
