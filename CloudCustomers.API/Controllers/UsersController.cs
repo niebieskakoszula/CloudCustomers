@@ -78,5 +78,17 @@ namespace CloudCustomers.API.Controllers
 			}
 			return NotFound();
 		}
+
+		[HttpGet(Name = "FakeMethod_5")]
+		public async Task<IActionResult> FakeMethod_5()
+		{
+			var users = await _userService.GetAllUsers();
+
+			if (users.Any())
+			{
+				return Ok(users);
+			}
+			return NotFound();
+		}
 	}
 }
