@@ -5,7 +5,7 @@ namespace CloudCustomers.API.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class UsersController : ControllerBase
+	public class UsersController : ControllerBase, IUserController
 	{
 		private readonly IUsersService _userService;
 
